@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = os.path.join("Resources/budget_data.csv")
+csvpath = os.path.join('Resources" , budget_data.csv')
 
 # Create lists to store data
 month = []
