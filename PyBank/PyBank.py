@@ -3,7 +3,7 @@ import os
 import csv
 
 # Set path for file
-csvpath = os.path.join('Resources" , budget_data.csv')
+csvpath = os.path.join("Resources" , "budget_data.csv")
 
 # Create lists to store data
 month = []
@@ -25,6 +25,7 @@ with open(csvpath, newline="") as csvfile:
     total_amount = sum(profit_loss_table)
     NewPL = profit_loss_table[1:]
     OldPL = profit_loss_table[:-1]
+   
 
     amount_change = [new - old for (new, old) in zip(NewPL, OldPL)]
     avg_change = (sum(amount_change) / len(amount_change))
@@ -32,7 +33,7 @@ with open(csvpath, newline="") as csvfile:
     #print(max(amount_change))
     month_adjusted = month[1:]
     month_and_change = zip(month_adjusted, amount_change)
-    print(month_and_change)
+    #print(month_and_change)
 
     #greatest_inc_profits = [max(y) for (x,y) in zip(month[1:], amount_change)]
     #print(greatest_inc_profits)
